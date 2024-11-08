@@ -24,5 +24,7 @@ input {
     display: flex;
     flex-direction: column;
     width: 50%;
+    height: 80vh;
     align-items: flex-start;
+    overflow: scroll;
 }

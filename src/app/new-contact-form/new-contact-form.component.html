@@ -14,16 +14,19 @@
       <button (click)="saveContact()">SAVE</button>
     </div>
     <div class="column">
-      @if (contactList.length > 0) {
-        @for (item of contactList; track item.firstName) {
-            <div class="card">
+    
+        <h3>Contact List</h3>
 
-            <p>{{item.firstName}}</p>
-            <p>{{item.age}}</p>
-            <p>{{item.telephone}}</p>
-            <p>{{item.twitter}}</p>
-        
-            </div>
+        @if (contactList.length > 0) {
+            @for (item of contactList; track item.firstName) {
+                <div class="card">
+
+                <p>{{item.firstName}}</p>
+                <p>{{item.age}}</p>
+                <p>{{item.telephone}}</p>
+                <p>{{item.twitter}}</p>
+            
+                </div>
+            }
         }
-      }
   </div>
