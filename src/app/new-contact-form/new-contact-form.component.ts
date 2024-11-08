@@ -5,41 +5,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-new-contact-form',
   standalone: true,
   imports: [ReactiveFormsModule],
-  // templateUrl: './new-contact-form.component.html',
+  templateUrl: './new-contact-form.component.html',
   styleUrl: './new-contact-form.component.scss',
-  template: `
-    <div class="row">
-        <div class="column">
-          <form [formGroup]="contactForm" >
-            <label for="firstname"> First Name </label>
-            <input (keyup)="prettyformupdater()" name="firstname" formControlName="firstName" />
-            <label for="age"> Age </label>
-            <input (keyup)="prettyformupdater()" name="age" formControlName="age" />
-            <label for="telephone"> Telephone </label>
-            <input  (keyup)="prettyformupdater()" name="telephone" formControlName="telephone"/>
-            <label for="twitter">Twitter </label>
-            <input (keyup)="prettyformupdater()" name="twitter" formControlName="twitter"/>
-          </form>
-          <pre>{{prettyFormValues}}</pre>
-          <button (click)="saveContact()">SAVE</button>
-        </div>
-        <div class="column">
-          @if (contactList.length > 0) {
-            @for (item of contactList; track item.firstName) {
-                <div class="card">
-
-                <p>{{item.firstName}}</p>
-                <p>{{item.age}}</p>
-                <p>{{item.telephone}}</p>
-                <p>{{item.twitter}}</p>
-            
-                </div>
-            }
-          }
-      </div>
-
-      
-  `
 })
 export class NewContactFormComponent {
   public firstName: FormControl = new FormControl('');
