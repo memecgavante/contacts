@@ -1,0 +1,28 @@
+
+input {
+    display: block;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+.card{
+    padding: 1em;
+    border: solid 1px #1a1a1a;
+    margin: 1em;
+    border-radius: 1em;
+    width: 80%;
+    
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+}
